@@ -74,11 +74,12 @@ function Controls({guess, reset}) {
 
 function reset() {
   console.log("Time to reset");
+//  state.name = ""; // FIXME: added this line
   ch_reset();
 }
 
 function Play({state}) {
-  let {word, guesses, name} = state;
+  let {word, guesses, name, user} = state;
   let bullsCows = calcBullsCows(word, guesses);
   // let bullsCows = calcBullsCows("1234", "5324");
 
@@ -169,7 +170,7 @@ function Play({state}) {
       <div className="App">
         <h1>You Win!</h1>
         <p>
-          <Controls reset={reset}/> 
+          <Controls reset={reset}/>
         </p>
       </div>
     );
@@ -251,6 +252,7 @@ function Play({state}) {
 
 function Login() {
   const [name, setName] = useState("");
+  const [user, setUser] = useState("");
 
   return (
     <div className="row">
@@ -258,6 +260,9 @@ function Login() {
         <input type="text"
                value={name}
                onChange={(ev) => setName(ev.target.value)} />
+        <input type="text"
+               value={user}
+               onChange={(ev) => setUser(ev.target.value)} />
       </div>
       <div className="column">
         <button onClick={() => ch_login(name)}>
