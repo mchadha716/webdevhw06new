@@ -32,7 +32,7 @@ defmodule Hangman.Game do
     array_with_zero = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
     first_digit = Enum.random(array_without_zero)
-    List.delete(array_with_zero, first_digit)
+    array_with_zero = List.delete(array_with_zero, first_digit)
     rest_digit = List.to_string(Enum.take_random(array_with_zero, 3))
 
     number = first_digit <> rest_digit
