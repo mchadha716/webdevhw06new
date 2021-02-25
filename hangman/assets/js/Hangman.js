@@ -169,7 +169,7 @@ function Play({state}) {
       <div className="App">
         <h1>You Win!</h1>
         <p>
-          <button onClick={() => reload()}>Reset</button>
+          <Controls reset={reset}/> 
         </p>
       </div>
     );
