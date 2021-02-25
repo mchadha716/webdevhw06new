@@ -257,9 +257,11 @@ function Login() {
   return (
     <div className="row">
       <div className="column">
+        <h2>Game Name</h2>
         <input type="text"
                value={name}
                onChange={(ev) => setName(ev.target.value)} />
+        <h2>User Name</h2>
         <input type="text"
                value={user}
                onChange={(ev) => setUser(ev.target.value)} />
