@@ -180,9 +180,6 @@ function Play({state}) {
     <div>
       <div className="row">
         <div className="column">
-          <p>Word: {view.join(' ')}</p>
-        </div>
-        <div className="column">
           <p>Name: {name}</p>
         </div>
       </div>
