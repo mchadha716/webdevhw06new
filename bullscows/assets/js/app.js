@@ -17,7 +17,7 @@ import "phoenix_html";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import BullsCows from './BullsCows';
+import BullsCows from './bullscows';
 
 ReactDOM.render(
     <React.StrictMode>
